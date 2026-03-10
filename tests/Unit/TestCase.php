@@ -13,7 +13,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         Container::packageManifestPath('/tmp/packages.php');
 
-        new CountriesServiceProvider()->boot();
+        (new CountriesServiceProvider())->boot();
 
         $this->faker = new Container(false);
     }

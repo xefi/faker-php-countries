@@ -14,7 +14,7 @@ final class CountriesExtensionTest extends TestCase
         parent::setUp();
 
         $countriesExtension = new CountriesExtension(new Randomizer());
-        $this->countries = new \ReflectionClass($countriesExtension)->getProperty('countries')->getValue($countriesExtension);
+        $this->countries = (new \ReflectionClass($countriesExtension))->getProperty('countries')->getValue($countriesExtension);
     }
 
     public function testCountries()
